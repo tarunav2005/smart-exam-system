@@ -22,10 +22,16 @@ const StudentLayout = () => {
           className="sidebar-brand"
           style={{ justifyContent: "space-between" }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
-            <span className="sidebar-brand-icon">🎓</span>
-            <h3>ExamSphere</h3>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.7rem" }}>
+            <img
+              src="/logo.png"
+              alt="ExamSphere Logo"
+              className="sidebar-logo"
+            />
+
+            <h3 className="brand-title">ExamSphere</h3>
           </div>
+
           <NotificationBell />
         </div>
 

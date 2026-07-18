@@ -33,8 +33,14 @@ const Register = () => {
       <div className="auth-visual">
         <div className="auth-visual-content">
           <div className="auth-brand">
-            <span className="auth-brand-icon">🎓</span>
-            ExamSphere
+            <img src="/logo.png" alt="ExamSphere" className="auth-logo" />
+
+            <div className="brand-content">
+              <h2 className="brand-title">ExamSphere</h2>
+              <span className="brand-tagline">
+                Smart Online Examination Platform
+              </span>
+            </div>
           </div>
           <h1>Join a smarter way to run assessments</h1>
           <p>

@@ -41,6 +41,144 @@ html {
   scroll-behavior: smooth;
 }
 
+.sidebar-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 12px;
+  animation: floatLogo 3s ease-in-out infinite;
+}
+
+.brand-title {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+
+  background: linear-gradient(90deg, #8b5cf6, #a855f7, #60a5fa, #8b5cf6);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientMove 5s linear infinite;
+}
+
+.brand-title {
+  font-size: 2rem;
+
+  font-weight: 800;
+
+  margin: 0;
+
+  background: linear-gradient(90deg, #7c3aed, #a855f7, #38bdf8, #7c3aed);
+
+  background-size: 300%;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientText 6s linear infinite;
+}
+
+@keyframes gradientText {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 300%;
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+
+.auth-logo {
+  width: 56px;
+
+  height: 56px;
+
+  border-radius: 16px;
+
+  animation: floatLogo 4s ease-in-out infinite;
+
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.35);
+}
+
+@keyframes floatLogo {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+.auth-visual {
+  position: relative;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #312e81, #5b21b6, #7c3aed);
+}
+
+.auth-visual::before {
+  content: "";
+
+  position: absolute;
+
+  width: 550px;
+
+  height: 550px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  top: -160px;
+
+  right: -120px;
+
+  animation: blobMove 10s ease-in-out infinite;
+}
+
+.auth-visual::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+
+  height: 420px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  left: -120px;
+
+  bottom: -100px;
+
+  animation: blobMove2 12s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
 body {
   font-family:
     "Inter",
@@ -1380,4 +1518,46 @@ body {
 .code-editor-input:focus {
   outline: none;
   border-color: var(--primary);
+}
+
+/* ---------- ANIMATED LOGIN BLOBS ---------- */
+.auth-visual {
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.auth-blob-1 {
+  width: 260px;
+  height: 260px;
+  background: rgba(255, 255, 255, 0.08);
+  top: -60px;
+  right: -60px;
+}
+
+.auth-blob-2 {
+  width: 180px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.06);
+  bottom: -40px;
+  left: -40px;
+}
+
+.auth-visual-content {
+  position: relative;
+  z-index: 1;
+}
+
+.auth-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  object-fit: cover;
 }

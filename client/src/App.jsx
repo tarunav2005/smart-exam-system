@@ -11,6 +11,7 @@ import FacultyLayout from "./pages/faculty/FacultyLayout";
 import NotFound from "./pages/NotFound";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResultReview from "./pages/student/ResultReview";
+import LandingPage from "./pages/LandingPage";
 
 // Simple placeholder dashboards for now — we'll build these out properly on Day 2+
 const Dashboard = ({ title }) => {
@@ -39,6 +40,7 @@ const PrivateRoute = ({ children, allowedRoles }) => {
 function AppRoutes() {
   return (
     <Routes>
+      <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
