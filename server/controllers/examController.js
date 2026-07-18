@@ -1,6 +1,6 @@
 const Exam = require("../models/Exam");
 const ExamPaper = require("../models/ExamPaper");
-const User = require("../models/User");
+const User = require("../models/user");
 const Subject = require("../models/Subject");
 const { evaluateProgrammingSubmission } = require("../utils/judge0");
 const {
