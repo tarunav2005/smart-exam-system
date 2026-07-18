@@ -10,19 +10,19 @@ const generateToken = (id) => {
   });
 };
 
-const {
-  register,
-  login,
-  getMe,
-  getStudents,
-  forgotPassword,
-  verifyOtp,
-  resetPassword,
-  getAllUsers,
-  toggleUserStatus,
-  changeUserRole,
-  deleteUser,
-} = require("../controllers/authController");
+// const {
+//   register,
+//   login,
+//   getMe,
+//   getStudents,
+//   forgotPassword,
+//   verifyOtp,
+//   resetPassword,
+//   getAllUsers,
+//   toggleUserStatus,
+//   changeUserRole,
+//   deleteUser,
+// } = require("../controllers/authController");
 
 // @route  POST /api/auth/register
 exports.register = async (req, res) => {
