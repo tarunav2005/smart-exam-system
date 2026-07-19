@@ -1123,42 +1123,102 @@ body {
 }
 
 .stat-card {
+  position: relative;
   background: #fff;
-  border-radius: 12px;
-  padding: 1.3rem;
-  box-shadow: var(--card-shadow);
+  border-radius: 14px;
+  padding: 1.4rem 1.3rem;
+  box-shadow:
+    0 1px 3px rgba(15, 23, 42, 0.05),
+    0 1px 2px rgba(15, 23, 42, 0.04);
   border: 1px solid var(--border);
+  overflow: hidden;
+  animation: statCardIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  transition:
+    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.25s ease;
+}
+
+.stat-card:nth-child(1) {
+  animation-delay: 0.02s;
+}
+.stat-card:nth-child(2) {
+  animation-delay: 0.08s;
+}
+.stat-card:nth-child(3) {
+  animation-delay: 0.14s;
+}
+.stat-card:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.stat-card:nth-child(5) {
+  animation-delay: 0.26s;
+}
+.stat-card:nth-child(6) {
+  animation-delay: 0.32s;
+}
+.stat-card:nth-child(7) {
+  animation-delay: 0.38s;
+}
+.stat-card:nth-child(8) {
+  animation-delay: 0.44s;
+}
+
+@keyframes statCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), #7c3aed);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 16px 32px rgba(79, 70, 229, 0.12),
+    0 4px 8px rgba(15, 23, 42, 0.06);
+  border-color: rgba(79, 70, 229, 0.25);
+}
+.stat-card:hover::before {
+  transform: scaleX(1);
 }
 
 .stat-label {
-  font-size: 0.78rem;
-  color: var(--text-light);
-  font-weight: 600;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
-  margin-bottom: 0.4rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  display: block;
 }
 
 .stat-value {
-  font-size: 1.9rem;
+  font-size: 1.85rem;
   font-weight: 800;
-  color: var(--text-dark);
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  transition: color 0.2s;
 }
 
-.chart-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: var(--card-shadow);
-  border: 1px solid var(--border);
-  margin-bottom: 1.5rem;
-}
-
-.chart-card h3 {
-  font-size: 1rem;
-  color: var(--text-mid);
-  margin-bottom: 1rem;
-  font-weight: 600;
+.stat-card:hover .stat-value {
+  color: var(--primary);
 }
 
 @media (max-width: 900px) {
