@@ -1504,7 +1504,10 @@ exports.getResultReview = async (req, res) => {
       .populate("exam", "title totalMarks");
 
     if (!paper) return res.status(404).json({ message: "Result not found" });
-    if (paper.student.toString() !== req.user._id.toString()) {
+    if (
+      !paper.student ||
+      paper.student.toString() !== req.user._id.toString()
+    ) {
       return res
         .status(403)
         .json({ message: "Not authorized to view this result" });
