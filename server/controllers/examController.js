@@ -1518,6 +1518,21 @@ exports.getResultReview = async (req, res) => {
 
     const review = paper.questions.map((qEntry) => {
       const q = qEntry.question;
+      if (!q) {
+        return {
+          questionText:
+            "(This question has been removed from the question bank)",
+          type: "unknown",
+          marks: qEntry.marks,
+          difficulty: null,
+          studentAnswer: "—",
+          correctAnswer: "—",
+          isSkipped: false,
+          isCorrect: false,
+          explanation: null,
+          chapter: null,
+        };
+      }
       const answer = paper.answers.find(
         (a) => a.question.toString() === q._id.toString(),
       );
