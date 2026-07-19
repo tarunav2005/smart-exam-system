@@ -1556,15 +1556,16 @@ exports.getResultReview = async (req, res) => {
       } else if (q.type === "programming") {
         studentAnswerDisplay = answer?.selectedAnswer || "(no code submitted)";
         correctAnswerDisplay = answer?.manualFeedback || "Not evaluated";
-        isCorrect =
+        isCorrect = !!(
           answer?.manualFeedback?.includes("Passed") &&
-          !answer.manualFeedback.startsWith("Passed 0/");
+          !answer?.manualFeedback?.startsWith("Passed 0/")
+        );
       } else {
         studentAnswerDisplay = answer?.selectedAnswer || "(no answer)";
         isCorrect =
           !isSkipped &&
-          answer.selectedAnswer.trim().toLowerCase() ===
-            q.correctAnswer.trim().toLowerCase();
+          answer?.selectedAnswer?.trim().toLowerCase() ===
+            q.correctAnswer?.trim().toLowerCase();
       }
 
       return {
