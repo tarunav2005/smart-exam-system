@@ -463,7 +463,7 @@ const LandingPage = () => {
             <div className="stat-number">
               <Counter target={s.n} suffix={s.suffix} />
             </div>
-            <div className="stat-label">{s.label}</div>
+            <div className="landing-stat-label">{s.label}</div>
           </motion.div>
         ))}
       </section>
