@@ -192,32 +192,38 @@ Each question stores
 Login/Register Page
 <img width="1280" height="608" alt="image" src="https://github.com/user-attachments/assets/433e72bd-39d5-444d-b456-769182cda2bb" />
 
+
 Student Panel with Perfomance check by charts,Results,Exam
 <img width="1280" height="604" alt="image" src="https://github.com/user-attachments/assets/5fd511fd-b8e1-4546-9174-0b17e5dcf14f" />
+
 
 Admin panel — institute/course/subject management, user management, system-wide analytics
 <img width="1280" height="602" alt="image" src="https://github.com/user-attachments/assets/73252a3f-62d8-4d93-8538-fb6a9c15c8ec" />
 
+
 Institute Management 
 <img width="1280" height="613" alt="image" src="https://github.com/user-attachments/assets/2cb0ceac-8569-483a-ae9f-16fa4ca27f50" />
+
 
 Add questions manually+ Excel Import function
 <img width="537" height="780" alt="image" src="https://github.com/user-attachments/assets/4c529a2e-8c9f-428f-a9e5-b13fc11cb076" />
 
+
 Live Exam Status for faculty
 <img width="1280" height="606" alt="image" src="https://github.com/user-attachments/assets/2ee829fc-57a3-4f55-b9a7-fa930f17def3" />
+
 
 Faculty Analytics with marksheet download
 <img width="1280" height="612" alt="image" src="https://github.com/user-attachments/assets/271b6fcf-f9d7-43e8-b548-aadf94942fa6" />
 
 
 Future Enhancements:
-AI Question Generator
-AI Exam Proctoring
-Face Detection
-Voice Monitoring
-Live Video Proctoring
-Certificate Generation
-Mobile Application
-Online Interview Module
-AI Performance Suggestions
+AI Question Generator,
+AI Exam Proctoring,
+Face Detection,
+Voice Monitoring,
+Live Video Proctoring,
+Certificate Generation,
+Mobile Application,
+Online Interview Module,
+AI Performance Suggestions,
